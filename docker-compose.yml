@@ -7,7 +7,7 @@ services:
     links:
       - 'mongodb'
     ports:
-      - '8000:8000'
+      - '5000:8000'
   mongodb:
     image: mongo:latest
     container_name: "mongodb"
