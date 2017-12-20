@@ -9,4 +9,12 @@ services:
     ports:
       - '8000:8000'
   mongodb:
-    image: mongo:3.0
+    image: mongo:latest
+    container_name: "mongodb"
+    environment:
+      - MONGO_DATA_DIR=/data/db
+      - MONGO_LOG_DIR=/dev/null
+    volumes:
+      - /var/lib/mongodb:/data/db
+    ports:
+      - "27017:27017"
