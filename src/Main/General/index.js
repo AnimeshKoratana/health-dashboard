@@ -210,13 +210,13 @@ class General extends Component {
                 Health Dashboard
               </div>
               <div className={css.subTitleBlock}>
-                Maxime Heckel —
+                Animesh Koratana —
                 <span className={css.emphasize}>
                   <i className="fa fa-map-marker"
                     aria-hidden="true"
                   >
                   </i>
-                  San Francisco, CA
+                  Stanford, CA
                 </span>
               </div>
             </div>
