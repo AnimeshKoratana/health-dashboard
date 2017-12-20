@@ -8,6 +8,9 @@ services:
       - 'mongodb'
     ports:
       - '5000:8000'
+    environment:
+      - USER='animesh'
+      - PASS = 'marlowe'
   mongodb:
     image: mongo:latest
     container_name: "mongodb"
