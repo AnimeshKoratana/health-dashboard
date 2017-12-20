@@ -34,7 +34,5 @@ COPY --from=appbuilder /app/build/static/css/* ./app/static/css/
 WORKDIR /app
 RUN apk --update add ca-certificates && chmod +x server
 
-ENV USER animesh
-ENV PASS marlowe
 EXPOSE 8000
 ENTRYPOINT ["./server", "-static=./"]
