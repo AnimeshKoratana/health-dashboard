@@ -27,7 +27,8 @@ func CheckAuth(w http.ResponseWriter, r *http.Request) (bool, *utils.HTTPError) 
 		return false, &utils.HTTPError{StatusCode: http.StatusUnauthorized, Status: http.StatusText(http.StatusUnauthorized)}
 	}
 
-	if pair[0] == os.Getenv("USER") && pair[1] == os.Getenv("PASS") {
+	//if pair[0] == os.Getenv("USER") && pair[1] == os.Getenv("PASS") {
+	if pair[0] == "animesh" && pair[1] == "marlowe" {
 		return true, nil
 	}
 
