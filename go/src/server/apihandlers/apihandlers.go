@@ -67,11 +67,11 @@ func StatusHandler(w http.ResponseWriter, r *http.Request) {
 func HealthHandler(w http.ResponseWriter, r *http.Request) {
 	log.Println("--- RECEIVED HEALTH DATA FROM HEALTH PULSE ---")
 
-	//auth, httpErr := auth.CheckAuth(w, r)
-	//if !auth {
-	//	http.Error(w, httpErr.Status, httpErr.StatusCode)
-	//	return
-	//}
+	auth, httpErr := auth.CheckAuth(w, r)
+	if !auth {
+		http.Error(w, httpErr.Status, httpErr.StatusCode)
+		return
+	}
 
 	var healthSample health.Data
 	data, err := ioutil.ReadAll(r.Body)
